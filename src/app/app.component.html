@@ -59,13 +59,14 @@
 
   main {
     width: 100%;
-    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
     box-sizing: inherit;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px dashed grey;
   }
 
   .angular-logo {
@@ -175,6 +176,8 @@
   }
 </style>
 
+<router-outlet />
+
 <main class="main">
   <div class="content">
     <div class="left-side">
@@ -205,7 +208,6 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-      <app-home></app-home>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -250,14 +252,3 @@
     </div>
   </div>
 </main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<router-outlet />
