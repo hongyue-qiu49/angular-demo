@@ -4,3 +4,12 @@
   --accent-color: #e8e7fa;
   --shadow-color: #E8E8E8;
 }
+
+.primary {
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  margin: 0 4px;
+  border-radius: 8px;
+  color: white;
+  padding: 4px 8px;
+}

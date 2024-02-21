@@ -1,0 +1,12 @@
+.cities {
+  width: 100%;
+
+  text-align: center;
+  margin-top: 20px;
+
+  th+th,
+  td+td {
+    border-left: 1px dashed var(--secondary-color);
+    padding: 4px;
+  }
+}

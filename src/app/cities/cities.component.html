@@ -1,0 +1,10 @@
+<table class="cities">
+  <tr>
+    <th *ngFor="let title of cities[0] | keyvalue: forbidSortInkeyValuePipe">{{title.key}}</th>
+    <th>operation</th>
+  </tr>
+  <tr *ngFor="let city of cities">
+    <td *ngFor="let detail of city | keyvalue: forbidSortInkeyValuePipe">{{detail.value}}</td>
+    <td><button class="primary">remove</button></td>
+  </tr>
+</table>
