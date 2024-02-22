@@ -5,6 +5,9 @@
   </tr>
   <tr *ngFor="let city of cities">
     <td *ngFor="let detail of city | keyvalue: forbidSortInkeyValuePipe">{{detail.value}}</td>
-    <td><button class="primary">remove</button></td>
+    <td>
+      <a class="primary" [routerLink]="['details', city.id]">view detail</a>
+      <button class="secondary">remove</button>
+    </td>
   </tr>
 </table>

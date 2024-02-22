@@ -5,11 +5,28 @@
   --shadow-color: #E8E8E8;
 }
 
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
 .primary {
   border: solid 1px var(--primary-color);
   background: var(--primary-color);
+}
+
+.secondary {
+  border: solid 1px var(--secondary-color);
+  background: var(--secondary-color);
+}
+
+.primary,
+.secondary {
+  font-size: 14px;
   margin: 0 4px;
   border-radius: 8px;
   color: white;
   padding: 4px 8px;
+  cursor: pointer;
 }
