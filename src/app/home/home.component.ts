@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CitiesComponent } from '../cities/cities.component';
 import { City } from '../cities';
 import { CommonModule } from '@angular/common';
+import { CityService } from '../city.service';
 
 @Component({
   selector: 'home',
@@ -14,26 +15,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  cities: City[] = [
-    {
-      id: 0,
-      name: 'Chongqing',
-      visitedBefore: true,
-      visitedTime: '',
-      planVisittime: '',
-      area: 'Asia',
-      contry: 'China',
-      photo: ''
-    },
-    {
-      id: 1,
-      name: 'Chengdu',
-      visitedBefore: false,
-      visitedTime: '',
-      planVisittime: '',
-      area: 'Asia',
-      contry: 'China',
-      photo: ''
-    }
-  ]
+  cities: City[] = []
+  cityService: CityService = inject(CityService);
+
+  constructor() {
+    this.cities = this.cityService.getCityList()
+  }
 }
