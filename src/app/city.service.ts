@@ -34,4 +34,8 @@ export class CityService {
   getCityList(): City[] {
     return this.cityList;
   }
+
+  getCityDetailById(id: number): City | undefined {
+    return this.cityList.find(city => city.id === id)
+  }
 }
